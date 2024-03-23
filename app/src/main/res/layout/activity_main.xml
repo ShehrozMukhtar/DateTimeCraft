@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#222831"
+    >
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     android:layout_marginHorizontal="12dp"
+     android:background="#222831"
+     >
+     <TextView
+         android:id="@+id/title"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintLeft_toLeftOf="parent"
+         android:text="Time Craft"
+         android:textAlignment="center"
+         android:fontFamily="@font/lobster"
+         android:textSize="40sp"
+         android:layout_marginTop="16dp"
+         android:textColor="#FFFFFF"
+         />
+     <FrameLayout
+         android:id="@+id/date"
+         android:layout_width="155dp"
+         android:layout_height="70dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/title"
+         android:padding="2dp"
+         android:layout_marginTop="16dp"
+         android:background="@drawable/rectangleshape"
+
+         >
+         <ImageView
+             android:layout_width="22dp"
+             android:layout_height="30dp"
+             android:src="@drawable/calendar"
+             android:layout_marginTop="5dp"
+             android:layout_gravity="center_horizontal"
+
+             />
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="DATE PICKER"
+             android:textAlignment="center"
+             android:fontFamily="@font/montserratbold"
+             android:textSize="20sp"
+             android:textColor="#FFFFFF"
+             android:layout_marginTop="35dp"
+             />
+     </FrameLayout>
+     <FrameLayout
+         android:id="@+id/time"
+         android:layout_width="155dp"
+         android:layout_height="70dp"
+         android:layout_marginTop="16dp"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/title"
+         android:background="@drawable/rectangleshape"
+         >
+         <ImageView
+             android:layout_width="22dp"
+             android:layout_height="30dp"
+             android:src="@drawable/clock"
+             android:layout_marginTop="5dp"
+             android:layout_gravity="center_horizontal"
+             />
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="TIME PICKER"
+             android:textAlignment="center"
+             android:fontFamily="@font/montserratbold"
+             android:textSize="20sp"
+             android:textColor="#FFFFFF"
+             android:layout_marginTop="35dp"
+             />
+     </FrameLayout>
+     <FrameLayout
+         android:id="@+id/time_stamp"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/date"
+         android:layout_marginTop="30dp"
+         android:background="@drawable/rectangleshape"
+         >
+
+         <ImageView
+             android:layout_width="22dp"
+             android:layout_height="22dp"
+             android:src="@drawable/stamp"
+             android:layout_marginLeft="65dp"
+             android:layout_gravity="center_vertical"
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/montserratbold"
+             android:text="TIME STAMP"
+             android:textColor="#FFFFFF"
+             android:textSize="24sp"
+             android:layout_gravity="center"
+             android:layout_marginLeft="10dp"
+             />
+     </FrameLayout>
+     <LinearLayout
+         android:id="@+id/time_t_date"
+         android:layout_width="match_parent"
+         android:layout_height="70dp"
+         android:layout_marginTop="30dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         android:background="@drawable/rectangleshape"
+         android:orientation="vertical"
+         app:layout_constraintTop_toBottomOf="@+id/time_stamp">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:gravity="center_horizontal"
+         android:layout_marginTop="5dp"
+         >
+         <ImageView
+             android:layout_width="22dp"
+             android:layout_height="22dp"
+             android:layout_gravity="center"
+             android:src="@drawable/stamp" />
+
+         <ImageView
+             android:layout_width="22dp"
+             android:layout_height="22dp"
+             android:layout_gravity="center"
+             android:layout_marginLeft="8dp"
+             android:src="@drawable/arrow" />
+         <ImageView
+             android:layout_width="22dp"
+             android:layout_height="22dp"
+             android:layout_gravity="center"
+             android:layout_marginLeft="8dp"
+             android:src="@drawable/calendar" />
+     </LinearLayout>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:fontFamily="@font/montserratbold"
+             android:text="TIME STAMP TO DATE"
+             android:textColor="#FFFFFF"
+             android:textSize="21sp" />
+     </LinearLayout>
+     <LinearLayout
+         android:id="@+id/date_t_time"
+         android:layout_width="match_parent"
+         android:layout_height="70dp"
+         android:layout_marginTop="30dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         android:background="@drawable/rectangleshape"
+         android:orientation="vertical"
+         app:layout_constraintTop_toBottomOf="@+id/time_t_date">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            >
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/stamp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/arrow" />
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/calendar" />
+        </LinearLayout>
+
+
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/montserratbold"
+             android:text="TIME STAMP TO TIME"
+             android:textColor="#FFFFFF"
+             android:layout_gravity="center"
+             android:textSize="22sp" />
+     </LinearLayout>
+     <FrameLayout
+         android:id="@+id/date_hour"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/date_t_time"
+         android:layout_marginTop="30dp"
+         android:background="@drawable/rectangleshape"
+         >
+
+         <ImageView
+             android:layout_width="22dp"
+             android:layout_height="22dp"
+             android:src="@drawable/no"
+             android:layout_marginLeft="32dp"
+             android:layout_gravity="center_vertical"
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/montserratbold"
+             android:text="DATE DIFF IN HOUR"
+             android:textColor="#FFFFFF"
+             android:textSize="20sp"
+             android:layout_gravity="center"
+             android:layout_marginLeft="15dp"
+             />
+     </FrameLayout>
+     <FrameLayout
+         android:id="@+id/date_min"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/date_hour"
+         android:layout_marginTop="30dp"
+         android:background="@drawable/rectangleshape"
+         >
+
+         <ImageView
+             android:layout_width="22dp"
+             android:layout_height="22dp"
+             android:src="@drawable/no"
+             android:layout_marginLeft="32dp"
+             android:layout_gravity="center_vertical"
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/montserratbold"
+             android:text="TIME DIF IN SECONDS"
+             android:textColor="#FFFFFF"
+             android:textSize="20sp"
+             android:layout_gravity="center"
+             android:layout_marginLeft="15dp"
+             />
+     </FrameLayout>
+     <FrameLayout
+         android:id="@+id/date_convt"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/date_min"
+         android:background="@drawable/rectangleshape"
+         android:layout_marginTop="30dp"
+         >
+
+         <ImageView
+             android:layout_width="22dp"
+             android:layout_height="22dp"
+             android:src="@drawable/clock"
+             android:layout_marginLeft="50dp"
+             android:layout_gravity="center_vertical"
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/montserratbold"
+             android:text="TIME CONVERTOR"
+             android:textColor="#FFFFFF"
+             android:textSize="20sp"
+             android:layout_gravity="center"
+             android:layout_marginLeft="15dp"
+             />
+     </FrameLayout>
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
